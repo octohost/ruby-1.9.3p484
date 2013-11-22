@@ -6,3 +6,5 @@ RUN add-apt-repository -y ppa:brightbox/ruby-ng-experimental
 RUN apt-get update
 RUN apt-get install -y ruby1.9.1
 RUN gem install foreman bundler --no-ri --no-rdoc
+
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
